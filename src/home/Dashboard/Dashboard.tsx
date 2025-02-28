@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ApexChartsInicio from "../../Charts/ApexCharts/ApexChartsInicio";
 import ChartistInicio from "../../Charts/Chartist/ChartistInicio";
-import EpochInicio from "../../Charts/Epoch/EpochInicio";
 import ObservablePlotInicio from "../../Charts/ObsPlot/ObsPlotInicio";
 import RechartsInicio from "../../Charts/Recharts/RechartsInicio";
 import ChartInicio from "../../Charts/ChartJS/ChartInicio";

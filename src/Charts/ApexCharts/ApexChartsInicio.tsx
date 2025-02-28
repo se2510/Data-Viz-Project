@@ -3,7 +3,7 @@ import Chart from "react-apexcharts";
 const ApexChartsInicio = () => {
   const options = {
     chart: {
-      type: "bar",
+      type: "bar" as const,
     },
     xaxis: {
       categories: ["Ene", "Feb", "Mar", "Abr", "May"],

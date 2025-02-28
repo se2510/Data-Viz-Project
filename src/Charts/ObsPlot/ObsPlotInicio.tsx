@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import * as Plot from "@observablehq/plot";
 
 const ObsPlotInicio = () => {
-  const plotRef = useRef();
+  const plotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const data = [
@@ -21,7 +21,9 @@ const ObsPlotInicio = () => {
       ]
     });
 
-    plotRef.current.appendChild(chart);
+    if (plotRef.current) {
+      plotRef.current.appendChild(chart);
+    }
 
     return () => chart.remove();
   }, []);

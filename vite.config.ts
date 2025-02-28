@@ -8,5 +8,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/data-viz-project",
+  base: "/se2510.github.io/",
 })
