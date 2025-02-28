@@ -37,16 +37,7 @@ Chart.js is one of the most popular charting libraries due to its excellent perf
 
 ---
 
-### 4️⃣ Epoch  
-📊 **Real-Time Visualization**
-
-Epoch is optimized for real-time data streaming and dashboards. It supports both static and dynamic visualizations, making it ideal for time-series data.
-
-🔗 [Official Website](https://epochjs.github.io/epoch/)
-
----
-
-### 5️⃣ Plot (Observable Plot)  
+### 4️⃣ Plot (Observable Plot)  
 📈 **Declarative & Flexible**
 
 Observable Plot is designed for concise and expressive data visualization. It works seamlessly with Observable notebooks and is great for quick, insightful charts.
@@ -55,7 +46,7 @@ Observable Plot is designed for concise and expressive data visualization. It wo
 
 ---
 
-### 6️⃣ Recharts  
+### 5️⃣ Recharts  
 🔄 **Built for React**
 
 Recharts is a React-based charting library that leverages D3 under the hood. It offers reusable components and is highly customizable for React applications.
@@ -70,7 +61,7 @@ Recharts is a React-based charting library that leverages D3 under the hood. It 
 📦 data-viz-project
  ┣ 📂 public
  ┣ 📂 src
- ┃ ┣ 📂 components
+ ┃ ┣ 📂 Charts
  ┃ ┃ ┣ 📂 ChartistGraph
  ┃ ┃ ┣ 📂 ApexChart
  ┃ ┃ ┣ 📂 ChartJSGraph

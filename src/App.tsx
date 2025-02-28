@@ -1,9 +1,13 @@
+import Dashboard from "./home/Dashboard/Dashboard"
 
 function App() {
 
   return (
     <>
-      <h1> Data viz project! :D </h1>
+      <div className="w-full h-full">
+        <Dashboard />
+      </div>
+      
     </>
   )
 }
