@@ -1,27 +1,30 @@
 import Chart from "react-apexcharts";
+import ApexBarOne from "./BarPlots/ApexBarOne";
+import ApexBarTwo from "./BarPlots/ApexBarTwo";
+import ApexBarThree from "./BarPlots/ApexBarThree";
+import ApexBarFour from "./BarPlots/ApexBarFour";
 
-const ApexChartsInicio = () => {
-  const options = {
-    chart: {
-      type: "bar" as const,
-    },
-    xaxis: {
-      categories: ["Ene", "Feb", "Mar", "Abr", "May"],
-    },
-  };
-
-  const series = [
-    {
-      name: "Ventas",
-      data: [10, 20, 15, 25, 30],
-    },
-  ];
-
-  return (
-    <div className="">
-      <Chart options={options} series={series} type="bar" height={350} />
-    </div>
-  )
+interface ApexChartsInicioProps {
+  selectedType: string;
 }
+
+const ApexChartsInicio: React.FC<ApexChartsInicioProps> = ({ selectedType = "Bar" }) => {
+  return (
+    <div className="grid grid-cols-2 gap-4 md:grid-cols-2 h-full">
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <ApexBarOne/>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <ApexBarTwo/>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <ApexBarThree/>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <ApexBarFour/>}
+      </div>
+    </div>
+  );
+};
 
 export default ApexChartsInicio;
