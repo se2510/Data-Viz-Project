@@ -1,30 +1,25 @@
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from "chart.js";
-import { Bar } from "react-chartjs-2";
 
-// Registrar los componentes necesarios
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
+interface ChartInicioProps {
+  selectedType: string;
+}
 
-const ChartInicio = () => {
-  const data = {
-    labels: ["Ene", "Feb", "Mar", "Abr", "May"],
-    datasets: [
-      {
-        label: "Ventas",
-        data: [10, 20, 15, 25, 30],
-        backgroundColor: "rgba(75, 192, 192, 0.5)",
-      },
-    ],
-  };
-
-  const options = {
-    responsive: true,
-    plugins: {
-      legend: { position: "top" as const },
-      title: { display: true, text: "Ventas Mensuales" },
-    },
-  };
-
-  return <Bar data={data} options={options} />;
+const ChartInicio: React.FC<ChartInicioProps> = ({ selectedType = "Bar" }) => {
+  return (
+    <div className="grid grid-cols-2 gap-4 md:grid-cols-2 h-full">
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>1</p>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>2</p>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>3</p>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>4</p>}
+      </div>
+    </div>
+  );
 };
 
 export default ChartInicio;

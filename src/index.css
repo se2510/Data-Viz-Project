@@ -9,9 +9,23 @@
     src: url('/src/assets/fonts/Valty\ DEMO.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-  }
-  
-  body {
-    
-  }
-  
+}
+
+@theme {
+    /* Colores Primarios */
+    --color-primary: #94d2bd; /* Tiffany Blue */
+    --color-primary-dark: #0a9396; /* Dark Cyan */
+    --color-primary-darker: #005f73; /* Midnight Green */
+    --color-primary-darkest: #001219; /* Rich Black */
+
+    /* Colores Secundarios */
+    --color-secondary: #001219; /* Rich Black */
+    --color-secondary-light: #005f73; /* Midnight Green */
+    --color-secondary-lighter: #0a9396; /* Dark Cyan */
+    --color-secondary-lightest: #94d2bd; /* Tiffany Blue */
+
+    /* Colores Terciarios */
+    --color-tertiary: #e9d8a6; /* Vanilla */
+    --color-tertiary-dark: #d4c095; /* Un tono más oscuro de Vanilla (puedes ajustarlo) */
+    --color-tertiary-darker: #bfa884; /* Otro tono más oscuro (opcional) */
+} 

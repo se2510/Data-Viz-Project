@@ -1,34 +1,25 @@
-import { useEffect, useRef } from "react";
-import * as Plot from "@observablehq/plot";
 
-const ObsPlotInicio = () => {
-  const plotRef = useRef<HTMLDivElement>(null);
+interface ObsPlotInicio {
+  selectedType: string;
+}
 
-  useEffect(() => {
-    const data = [
-      {name: "A", value: 30},
-      {name: "B", value: 80},
-      {name: "C", value: 45},
-      {name: "D", value: 60},
-      {name: "E", value: 20},
-      {name: "F", value: 90},
-      {name: "G", value: 55},
-    ];
-
-    const chart = Plot.plot({
-      marks: [
-        Plot.barY(data, {x: "name", y: "value"})
-      ]
-    });
-
-    if (plotRef.current) {
-      plotRef.current.appendChild(chart);
-    }
-
-    return () => chart.remove();
-  }, []);
-
-  return <div ref={plotRef}></div>;
+const ObsPlotInicio: React.FC<ObsPlotInicio> = ({ selectedType = "Bar" }) => {
+  return (
+    <div className="grid grid-cols-2 gap-4 md:grid-cols-2 h-full">
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>1</p>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>2</p>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>3</p>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>4</p>}
+      </div>
+    </div>
+  );
 };
 
 export default ObsPlotInicio;

@@ -1,27 +1,24 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
-const data = [
-  { name: "A", value: 30 },
-  { name: "B", value: 80 },
-  { name: "C", value: 45 },
-  { name: "D", value: 60 },
-  { name: "E", value: 20 },
-  { name: "F", value: 90 },
-  { name: "G", value: 55 }
-];
+interface RechartsInicioProps {
+  selectedType: string;
+}
 
-const RechartsInicio = () => {
+const RechartsInicio: React.FC<RechartsInicioProps> = ({ selectedType = "Bar" }) => {
   return (
-    <ResponsiveContainer width="100%" height={300}>
-      <BarChart data={data}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey="value" fill="#8884d8" />
-      </BarChart>
-    </ResponsiveContainer>
+    <div className="grid grid-cols-2 gap-4 md:grid-cols-2 h-full">
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>1</p>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>2</p>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>3</p>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>4</p>}
+      </div>
+    </div>
   );
 };
 

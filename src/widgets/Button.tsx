@@ -19,11 +19,12 @@ const Button: React.FC<ButtonProps> = ({ text = "Botón", onClick, inv = false, 
 
   return (
     <button
-      className={`p-2 m-2 w-full flex flex-row items-center justify-evenly border-2 border-tiffanyBlue transition-colors duration-300 
-        ${isClicked ? "bg-vanilla" : "bg-rufous"} 
-        ${inv ? "hover:bg-[#e9d8a6] hover:text-[#001219]" : "hover:bg-[#94d2bd] hover:text-[#9b2226]"}
-        ${selected ? "bg-[#94d2bd] text-[#001219]" : ""}
-        ${selected && inv ? "bg-[#e9d8a6] text-[#001219]" : ""}
+      className={`p-2 m-2 w-full flex flex-row items-center justify-evenly border-2 transition-colors duration-300 
+        ${isClicked ? "" : "" } 
+        ${inv ? "hover:bg-tertiary hover:text-secondary bg-primary text-secondary" : "hover:bg-secondary hover:text-tertiary "}
+        ${selected && inv ? "bg-tertiary text-secondary" : ""}
+        ${selected && !inv ? "bg-secondary text-primary" : ""}
+        
         `}
       onClick={handleClick}
     >

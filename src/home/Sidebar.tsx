@@ -16,7 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onChartChange }) => {
 
     return (
         <>
-            <div className="bg-[#9B2226] text-[#E9D8A6] w-full h-full p-2">
+            <div className="bg-secondary text-primary w-full h-full p-2">
                 <h2 className="text-center text-2xl p-4"> Escoje la Librería n.n </h2>
                 <div className="flex flex-col items-center justify-end">
                     <div className="flex flex-col items-center">
@@ -27,6 +27,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onChartChange }) => {
                                 setSelectedLib("Chartist");
                                 handleClick();
                             }} 
+                            inv={true}
                             icon={selectedLib == "Chartist" ?  <FaRegChartBar /> : ""}
                             selected={selectedLib == "Chartist" ?  true : false}
                         />
@@ -37,6 +38,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onChartChange }) => {
                                 handleClick();
                                 setSelectedLib("ApexCharts");
                             }} 
+                            inv={true}
                             icon={selectedLib == "ApexCharts" ?  <FaRegChartBar /> : ""}
                             selected={selectedLib == "ApexCharts" ?  true : false}
                         />
@@ -47,6 +49,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onChartChange }) => {
                                 handleClick();
                                 setSelectedLib("Chart");
                             }} 
+                            inv={true}
                             icon={selectedLib == "Chart" ?  <FaRegChartBar /> : ""}
                             selected={selectedLib == "Chart" ?  true : false}
                         />
@@ -67,6 +70,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onChartChange }) => {
                                 handleClick();
                                 setSelectedLib("ObservablePlot");
                             }} 
+                            inv={true}
                             icon={selectedLib == "ObservablePlot" ?  <FaRegChartBar /> : ""}
                             selected={selectedLib == "ObservablePlot" ?  true : false}
                         />
@@ -77,6 +81,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onChartChange }) => {
                                 handleClick();
                                 setSelectedLib("Recharts");
                             }} 
+                            inv={true}
                             icon={selectedLib == "Recharts" ?  <FaRegChartBar /> : ""}
                             selected={selectedLib == "Recharts" ?  true : false}
                         />

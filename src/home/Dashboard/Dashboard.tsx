@@ -33,21 +33,21 @@ const Dashboard: React.FC = () => {
           <Sidebar onChartChange={handleChartChange} />
         </div>
         <div className="dashboard">
-          <div className="Chart-Selection bg-[#ee9b00] text-[#e9d8a6]p-2">
+          <div className="Chart-Selection bg-primary p-2">
             <div className="flex flex-row justify-items-start">
-              <Button text="Barras" inv={true} icon={<IoBarChart />} 
+              <Button text="Barras" inv={false} icon={<IoBarChart />} 
                 onClick={() => setSelectedType("Bar")}
                 selected={selectedType === "Bar"}
               />
-              <Button text="Lineas" inv={true} icon={<FaChartLine />}
+              <Button text="Lineas" inv={false} icon={<FaChartLine />}
                 onClick={() => setSelectedType("Line")}  
                 selected={selectedType === "Line"}
               />
-              <Button text="Pastel" inv={true} icon={<FaChartPie />}  
+              <Button text="Pastel" inv={false} icon={<FaChartPie />}  
                 onClick={() => setSelectedType("Pie")}
                 selected={selectedType === "Pie"}
               />
-              <Button text="Estilo Aleatorio" inv={true} icon={<FaRandom />} 
+              <Button text="Estilo Aleatorio" inv={false} icon={<FaRandom />} 
                 onClick={() => setSelectedType("Random")}
                 selected={selectedType === "Random"}
               />

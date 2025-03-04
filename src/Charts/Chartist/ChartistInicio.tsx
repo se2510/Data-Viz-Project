@@ -1,27 +1,25 @@
-import { useEffect } from "react";
-import { LineChart } from "chartist";
-import "chartist/dist/index.css";
 
-const ChartistInicio = () => {
-  useEffect(() => {
-    new LineChart(
-      "#chart",
-      {
-        labels: ["Ene", "Feb", "Mar", "Abr", "May"],
-        series: [[5, 9, 7, 8, 5]],
-      },
-      {
-        high: 10,
-        low: 0,
-      }
-    );
-  }, []);
+interface ChartistInicioProps {
+  selectedType: string;
+}
 
-  return(
-    <div className="">
-      <div id="chart" className="ct-chart ct-perfect-fourth"></div>
+const ChartistInicio: React.FC<ChartistInicioProps> = ({ selectedType = "Bar" }) => {
+  return (
+    <div className="grid grid-cols-2 gap-4 md:grid-cols-2 h-full">
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>1</p>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>2</p>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>3</p>}
+      </div>
+      <div className="bg-white p-4 rounded-md shadow-md h-full">
+        {selectedType === "Bar" &&  <p>4</p>}
+      </div>
     </div>
-  ) 
+  );
 };
 
 export default ChartistInicio;
