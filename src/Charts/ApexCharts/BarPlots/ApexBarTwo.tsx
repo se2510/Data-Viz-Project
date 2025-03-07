@@ -6,13 +6,13 @@ const ApexBarTwo: React.FC = () => {
     options: {
       chart: {
         id: "basic-bar",
-        background: "#1e1e1e", // Fondo oscuro
-        foreColor: "#fff", // Color del texto en blanco
+        background: "#1e1e1e",
+        foreColor: "#fff",
       },
       xaxis: {
         categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
       },
-      colors: ["#00E396"], // Cambia el color de las barras
+      colors: ["#00E396"],
       plotOptions: {
         bar: {
           borderRadius: 4,
@@ -20,7 +20,7 @@ const ApexBarTwo: React.FC = () => {
         },
       },
       tooltip: {
-        theme: "dark", // Hace que el tooltip también sea oscuro
+        theme: "dark",
       },
     },
     series: [

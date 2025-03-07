@@ -1,8 +1,7 @@
-import React from "react";
 import Chart from "react-apexcharts";
 
 const ApexBarThree = () => {
-  const options = {
+  const options: ApexCharts.ApexOptions = {
     series: [
       {
         name: "Actual",
@@ -97,10 +96,10 @@ const ApexBarThree = () => {
     },
     colors: ["#00E396"],
     dataLabels: {
-      formatter: function (val, opt) {
+      formatter: function (val, opt): string | number | string[] {
         const goals =
           opt.w.config.series[opt.seriesIndex].data[opt.dataPointIndex].goals;
-        return goals && goals.length ? `${val} / ${goals[0].value}` : val;
+        return goals && goals.length ? `${val} / ${goals[0].value}` : String(val);
       },
     },
     legend: {

@@ -2,7 +2,7 @@ import React from "react";
 import Chart from "react-apexcharts";
 
 const ApexBarFour: React.FC = () => {
-  const options = {
+    const options: ApexCharts.ApexOptions = {
     series: [
       {
         name: "Product A",

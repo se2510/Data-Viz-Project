@@ -47,19 +47,18 @@ const Dashboard: React.FC = () => {
                 onClick={() => setSelectedType("Pie")}
                 selected={selectedType === "Pie"}
               />
-              <Button text="Estilo Aleatorio" inv={false} icon={<FaRandom />} 
-                onClick={() => setSelectedType("Random")}
-                selected={selectedType === "Random"}
+              <Button text="Otros tipos" inv={false} icon={<FaRandom />} 
+                onClick={() => setSelectedType("Other")}
+                selected={selectedType === "Other"}
               />
             </div>
           </div>
           <div className="Charts bg-gray-100 w-full min-w-0  p-2">
             {selectedChart === "ApexCharts" && <ApexChartsInicio selectedType={selectedType}/>}
-            {selectedChart === "Chartist" && <ChartistInicio />}
-            {selectedChart === "Chart" && <ChartInicio />}
-            {/* {selectedChart === "Epoch" && <EpochInicio />} */}
-            {selectedChart === "ObservablePlot" && <ObservablePlotInicio />}
-            {selectedChart === "Recharts" && <RechartsInicio />}
+            {selectedChart === "Chartist" && <ChartistInicio selectedType={selectedType}/>}
+            {selectedChart === "Chart" && <ChartInicio selectedType={selectedType}/>}
+            {selectedChart === "ObservablePlot" && <ObservablePlotInicio selectedType={selectedType}/>}
+            {selectedChart === "Recharts" && <RechartsInicio selectedType={selectedType}/>}
           </div>
           
         </div>

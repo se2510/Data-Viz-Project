@@ -16,7 +16,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onChartChange }) => {
 
     return (
         <>
-            <div className="bg-secondary text-primary w-full h-full p-2">
+            <aside className="bg-secondary text-primary w-full h-full p-2">
                 <h2 className="text-center text-2xl p-4"> Escoje la Librería n.n </h2>
                 <div className="flex flex-col items-center justify-end">
                     <div className="flex flex-col items-center">
@@ -89,7 +89,7 @@ const Sidebar: React.FC<SidebarProps> = ({ onChartChange }) => {
                     <Button text="Información" inv={false} icon={<FaCircleInfo />}  />
                 </div>
                 
-            </div>
+            </aside>
         </>
     );
 };

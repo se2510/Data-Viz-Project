@@ -1,8 +1,7 @@
 import Chart from "react-apexcharts";
-import { ApexOptions } from "apexcharts";
 
 const ApexBarOne: React.FC = () => {
-  const options: ApexOptions = {
+  const options: ApexCharts.ApexOptions = {
     chart: {
       type: "bar",
       height: 440,
@@ -12,8 +11,8 @@ const ApexBarOne: React.FC = () => {
     plotOptions: {
       bar: {
         borderRadius: 5,
-        borderRadiusApplication: "end", // 'around', 'end'
-        borderRadiusWhenStacked: "all", // 'all', 'last'
+        borderRadiusApplication: "end", 
+        borderRadiusWhenStacked: "all",
         horizontal: true,
         barHeight: "80%",
       },
@@ -72,7 +71,7 @@ const ApexBarOne: React.FC = () => {
     yaxis: {
       labels: {
         style: {
-          fontSize: "5px", // Reduce el tamaño de las etiquetas del eje Y
+          fontSize: "5px", 
         },
       },
     },
@@ -98,12 +97,6 @@ const ApexBarOne: React.FC = () => {
   return (
     <div
       className="chart-container"
-      style={{
-        // backgroundColor: "#121212",
-        //padding: "20px",
-        //borderRadius: "10px",
-        //boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)",
-      }}
     >
       <Chart options={options} series={series} type="bar" height={280} />
     </div>
