@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react';
-import { BarChart } from 'chartist';
 import Button from '../../../widgets/Button';
+import { BarChart } from 'chartist';
 import "chartist/dist/index.css";
 
-const ChartistBarOne: React.FC = () => {
+const ChartistBarTwo: React.FC = () => {
     const chartRef = useRef<HTMLDivElement>(null); // Referencia para el contenedor del gráfico
-    const [data, setData] = useState([5, 8, 12, 6, 10]); // Datos iniciales para el gráfico de barras
+    const [data, setData] = useState([10, 15, 7, 12, 9]); // Datos iniciales para el gráfico de barras
     const chartInstance = useRef<BarChart | null>(null); // Referencia para la instancia del gráfico
 
     // Función para actualizar el gráfico
@@ -17,16 +17,16 @@ const ChartistBarOne: React.FC = () => {
             chartInstance.current.detach();
         }
 
-        // Crear una nueva instancia del gráfico de barras
+        // Crear una nueva instancia del gráfico de barras horizontales
         chartInstance.current = new BarChart(
             chartRef.current, // Usar la referencia del contenedor
             {
-                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo'], // Etiquetas del eje X
+                labels: ['A', 'B', 'C', 'D', 'E'], // Etiquetas del eje Y (horizontal)
                 series: [data], // Datos de las barras
             },
             {
                 axisX: {
-                    showGrid: true, // Mostrar líneas de la cuadrícula en el eje X
+                    showGrid: false, // Ocultar líneas de la cuadrícula en el eje X
                 },
                 axisY: {
                     showGrid: true, // Mostrar líneas de la cuadrícula en el eje Y
@@ -34,7 +34,7 @@ const ChartistBarOne: React.FC = () => {
                 },
                 height: 300, // Altura del gráfico
                 width: 600, // Ancho del gráfico
-                stackBars: false, // No apilar las barras
+                horizontalBars: true, // Habilitar barras horizontales
                 fullWidth: true, // Usar el ancho completo del contenedor
                 chartPadding: {
                     top: 20,
@@ -59,13 +59,12 @@ const ChartistBarOne: React.FC = () => {
 
     return (
         <div style={styles.container}>
-            <h2 style={styles.title}>Gráfico de Barras Dinámico</h2>
+            <h2 style={styles.title}>Gráfico de Barras Horizontales</h2>
             <div ref={chartRef} style={styles.chart}></div> {/* Contenedor del gráfico */}
             <div style={styles.controls}>
-                <Button 
-                  onClick={randomizeData}
-                  text="Generar Datos Aleatorios"
-                  inv={true}
+                <Button onClick={randomizeData}
+                    text="Datos Aleatorios"
+                    inv={true}
                 />
             </div>
         </div>
@@ -97,4 +96,4 @@ const styles = {
     },
 };
 
-export default ChartistBarOne;
+export default ChartistBarTwo;

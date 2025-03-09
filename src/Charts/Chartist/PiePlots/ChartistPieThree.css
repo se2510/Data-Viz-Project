@@ -1,0 +1,38 @@
+/* Estilos para el contenedor del gráfico */
+.chartist-pie-three-container {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el gráfico */
+.ct-chart {
+    margin: 0 auto;
+}
+
+/* Colores personalizados para las secciones del gráfico */
+.ct-series-a .ct-slice-donut {
+    stroke: #ff6384; /* Rojo */
+}
+
+.ct-series-b .ct-slice-donut {
+    stroke: #36a2eb; /* Azul */
+}
+
+.ct-series-c .ct-slice-donut {
+    stroke: #4bc0c0; /* Verde */
+}
+
+.ct-series-d .ct-slice-donut {
+    stroke: #ffcd56; /* Amarillo */
+}
+
+/* Animaciones personalizadas */
+.ct-slice-donut {
+    transition: all 0.3s ease;
+}
