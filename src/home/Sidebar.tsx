@@ -20,17 +20,6 @@ const Sidebar: React.FC<SidebarProps> = ({ onChartChange }) => {
                 <h2 className="text-center text-2xl p-4"> Escoje la Librería n.n </h2>
                 <div className="flex flex-col items-center justify-end">
                     <div className="flex flex-col items-center">
-                        <Button 
-                            text="Chartist" 
-                            onClick={() => {
-                                onChartChange("Chartist");
-                                setSelectedLib("Chartist");
-                                handleClick();
-                            }} 
-                            inv={true}
-                            icon={selectedLib == "Chartist" ?  <FaRegChartBar /> : ""}
-                            selected={selectedLib == "Chartist" ?  true : false}
-                        />
                         <Button
                             text="ApexCharts"
                             onClick={() => {
@@ -53,27 +42,6 @@ const Sidebar: React.FC<SidebarProps> = ({ onChartChange }) => {
                             icon={selectedLib == "Chart" ?  <FaRegChartBar /> : ""}
                             selected={selectedLib == "Chart" ?  true : false}
                         />
-                        {/* <Button 
-                            text="Epoch" 
-                            onClick={() => {
-                                onChartChange("Epoch");
-                                handleClick();
-                                setSelectedLib("Epoch");
-                            }} 
-                            icon={selectedLib == "Epoch" ?  <FaRegChartBar /> : ""}
-                            selected={selectedLib == "Epoch" ?  true : false}
-                        /> */}
-                        <Button
-                            text="Observable Plot"
-                            onClick={() => {
-                                onChartChange("ObservablePlot");
-                                handleClick();
-                                setSelectedLib("ObservablePlot");
-                            }} 
-                            inv={true}
-                            icon={selectedLib == "ObservablePlot" ?  <FaRegChartBar /> : ""}
-                            selected={selectedLib == "ObservablePlot" ?  true : false}
-                        />
                         <Button 
                             text="Recharts" 
                             onClick={() => {
@@ -84,6 +52,28 @@ const Sidebar: React.FC<SidebarProps> = ({ onChartChange }) => {
                             inv={true}
                             icon={selectedLib == "Recharts" ?  <FaRegChartBar /> : ""}
                             selected={selectedLib == "Recharts" ?  true : false}
+                        />
+                        <Button 
+                            text="Chartist" 
+                            onClick={() => {
+                                onChartChange("Chartist");
+                                setSelectedLib("Chartist");
+                                handleClick();
+                            }} 
+                            inv={true}
+                            icon={selectedLib == "Chartist" ?  <FaRegChartBar /> : ""}
+                            selected={selectedLib == "Chartist" ?  true : false}
+                        />
+                        <Button
+                            text="Observable Plot"
+                            onClick={() => {
+                                onChartChange("ObservablePlot");
+                                handleClick();
+                                setSelectedLib("ObservablePlot");
+                            }} 
+                            inv={true}
+                            icon={selectedLib == "ObservablePlot" ?  <FaRegChartBar /> : ""}
+                            selected={selectedLib == "ObservablePlot" ?  true : false}
                         />
                     </div>
                     <Button text="Información" inv={false} icon={<FaCircleInfo />}  />
